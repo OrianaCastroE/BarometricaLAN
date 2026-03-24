@@ -311,7 +311,6 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 }
 
 /* Izquierda */
-.hero-copy {}
 .hero-subtag {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(249,115,22,.2);
