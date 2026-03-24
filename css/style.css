@@ -175,7 +175,6 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo-ico {
   width: 42px; height: 42px;
-  background: var(--azul);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Barlow Condensed', sans-serif;
@@ -799,7 +798,7 @@ footer {
 
 .ft-logo { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
 .ft-logo-ico {
-  width: 40px; height: 40px; background: var(--naranja); border-radius: 8px;
+  width: 40px; height: 40px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: #fff;
 }
