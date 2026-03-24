@@ -72,7 +72,7 @@ ul  { list-style: none; }
 /* Títulos */
 .h1 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(48px, 5.5vw, 72px);
+  font-size: clamp(38px, 4vw, 58px);
   font-weight: 800;
   line-height: 1.05;
   color: #fff;
@@ -175,6 +175,7 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo-ico {
   width: 42px; height: 42px;
+  background: var(--azul);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Barlow Condensed', sans-serif;
@@ -311,6 +312,7 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 }
 
 /* Izquierda */
+.hero-copy {}
 .hero-subtag {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(249,115,22,.2);
@@ -665,82 +667,18 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 .g-lan .gcard-foot { background: var(--azul-cla); }
 .g-lan .gcard-foot span { font-weight: 700; color: var(--azul); }
 .g-lan .gcard-foot a   { color: var(--azul); }
-/* Logo de fondo */
-.g-lan {
-  position: relative;
-  overflow: hidden;
-}
-.g-lan::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../img/logos/lan.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.08;
-  transition: opacity .3s ease;
-  pointer-events: none;
-}
-.g-lan:hover::before {
-  opacity: 0.5;
-}
 
 /* Volcast */
 .g-vc { border-top: 3px solid #6B1020; }
 .g-vc .gbadge { background: #ffcdd6; color: #6B1020; }
 .g-vc .glogo  { color: #6B1020; }
 .g-vc .gcard-foot a { color: #6B1020; }
-/* Logo de fondo */
-.g-vc { 
-  border-top: 3px solid #6B1020;
-  position: relative;
-  overflow: hidden;
-}
-.g-vc .gbadge { background: #ffcdd6; color: #6B1020; }
-.g-vc .glogo  { color: #6B1020; }
-.g-vc .gcard-foot a { color: #6B1020; }
-.g-vc::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../img/logos/volcastPNG.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.08;
-  transition: opacity .3s ease;
-  pointer-events: none;
-}
-.g-vc:hover::before {
-  opacity: 0.5;
-}
 
 /* Volquetas */
 .g-vq { border-top: 3px solid #C0392B; }
 .g-vq .gbadge { background: #ffdbdb; color: #C0392B; }
 .g-vq .glogo  { color: #C0392B; }
 .g-vq .gcard-foot a { color: #C0392B; }
-/* Logo de fondo */
-.g-vq {
-  position: relative;
-  overflow: hidden;
-}
-.g-vq::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../img/logos/volquetasDelEste.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.08;
-  transition: opacity .3s ease;
-  pointer-events: none;
-}
-.g-vq:hover::before {
-  opacity: 0.5;
-}
 
 @media (max-width: 760px) { .grupo-grid { grid-template-columns: 1fr; max-width: 440px; } }
 
@@ -861,7 +799,7 @@ footer {
 
 .ft-logo { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
 .ft-logo-ico {
-  width: 40px; height: 40px; border-radius: 8px;
+  width: 40px; height: 40px; background: var(--naranja); border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: #fff;
 }
@@ -974,10 +912,11 @@ footer {
   .flota-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 540px) {
-  .flota-grid { grid-template-columns: 1fr; }
-  .flota-card { display: grid; grid-template-columns: 120px 1fr; }
-  .flota-top  { padding: 20px 16px; border-radius: 0; }
-  .flota-body { padding: 16px; }
+  .flota-grid { grid-template-columns: 1fr; gap: 16px; }
+  .flota-card { display: flex; flex-direction: column; }
+  .flota-top  { padding: 22px 20px; }
+  .flota-cap  { font-size: 28px; }
+  .flota-body { padding: 18px; }
 }
 
 /* =========================================================
@@ -1003,10 +942,10 @@ footer {
   .nos-grid { grid-template-columns: 1fr; gap: 36px; }
   .nos-gal {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px;
+    grid-template-rows: 200px 160px;
   }
-  .nos-foto.grande { grid-row: auto; }
-  .nos-foto { min-height: 160px; }
+  .nos-foto.grande { grid-row: 1 / 3; }
+  .nos-foto { min-height: 0; }
   .stats { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1021,9 +960,10 @@ footer {
 @media (max-width: 640px) {
   .gal-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: none;
   }
-  .gf, .gf.ancho { height: 200px; grid-column: auto; }
+  .gf { height: 200px; grid-column: auto; }
+  .gf.ancho { grid-column: auto; height: 200px; }
 }
 
 /* Empresas */
@@ -1055,16 +995,12 @@ footer {
 
 /* Formulario en móvil */
 @media (max-width: 480px) {
-  .form { padding: 20px 16px; }z
+  .form { padding: 20px 16px; }
   .form h3 { font-size: 20px; }
 }
 
 /* Chips del hero en móvil */
 @media (max-width: 480px) {
-  .chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
-  .chip { font-size: 12px; padding: 6px 11px; white-space: nowrap; flex-shrink: 0; }
-6s ease;
+  .chips { gap: 8px; }
+  .chip { font-size: 12px; padding: 6px 11px; }
 }
-.animar.visible {
-  opacity: 1;
-  transform: translateY(0);
