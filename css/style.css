@@ -495,6 +495,30 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
   .stats { grid-template-columns: repeat(2, 1fr); }
 }
 
+/*
+SECCION EMPLEADOS
+*/
+.tc{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  border:1.5px solid var(--azul);
+  text-align:center;
+  transition:all .3s
+}
+.tc:hover{
+  border-color:var(--azul-osc);
+  box-shadow:0 8px 22px var(--azul-cla);
+  transform:translateY(-4px)
+}
+.tc-p{
+  height:142px;
+  background:var(--azul) url('img/integrantes/cv1.jpg') center/cover no-repeat}
+.tc-i{
+  padding:10px
+}.tc-i strong{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.94rem;color:var(--azul-osc)}
+.tc-i span{font-size:.74rem;color:var(--gm)}
+
 /* =========================================================
    SERVICIOS
    ========================================================= */
@@ -801,7 +825,7 @@ footer {
   display: flex; align-items: center; justify-content: center;
   font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: #fff;
 }
-.ft-logo-txt { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: #fff; }
+.ft-logo-txt { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: #fff; }
 .ft-brand > p { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.75; margin-bottom: 18px; }
 .ft-social { display: flex; gap: 10px; flex-wrap: wrap; }
 .ft-social a {
