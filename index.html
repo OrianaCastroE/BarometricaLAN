@@ -3,52 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Barométrica LAN — barométrica profesional en Montevideo. Desagotes, desobstrucciones y limpieza de cámaras. Proveedor RUPE habilitado.">
-  <title>Barométrica LAN — barométrica Profesional en Montevideo</title>
+  <meta name="description" content="Barométrica LAN — La barométrica con más años en Montevideo. Desagotes, desobstrucciones y limpieza de cámaras para particulares e industrias. Proveedor RUPE habilitado.">
+  <title>Barométrica LAN — Barométrica Profesional en Montevideo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════
-     NAV
-     ═══════════════════════════════════ -->
-<nav>
+<!-- NAV -->
+<nav id="nav">
   <div class="nav-in">
-
     <a href="#inicio" class="logo">
-      <div class="logo-ico">BL</div>
+      <img src="./img/logos/lan.png" alt="Barométrica LAN Logo" class="logo-ico">
       <div class="logo-txt">
         Barométrica LAN
         <small>Montevideo · Uruguay</small>
       </div>
     </a>
-
-    <div class="nav-hora">
-      🕗 <b>Lun–Sáb</b>&nbsp;8:00 – 18:00 hs
-    </div>
-
+    <div class="nav-hora">🕗 <b>Lun–Sáb</b>&nbsp;8:00–18:00</div>
     <div class="nav-links">
       <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
+      <a href="#flota">Flota</a>
       <a href="#galeria">Trabajos</a>
       <a href="#empresas">Empresas</a>
       <a href="#grupo">Grupo</a>
       <a href="#contacto" class="nav-cta">Cotizar →</a>
     </div>
-
     <button class="ham" id="ham" onclick="abrirMenu()" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
-
   </div>
 </nav>
 
 <div class="mob" id="mob">
   <a href="#nosotros"  onclick="cerrarMenu()">Nosotros</a>
   <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+  <a href="#flota"     onclick="cerrarMenu()">Flota</a>
   <a href="#galeria"   onclick="cerrarMenu()">Trabajos</a>
   <a href="#empresas"  onclick="cerrarMenu()">Empresas</a>
   <a href="#grupo"     onclick="cerrarMenu()">Grupo</a>
@@ -56,71 +49,58 @@
 </div>
 
 
-<!-- ═══════════════════════════════════
-     HERO
-     ═══════════════════════════════════ -->
+<!-- HERO -->
 <section id="inicio" class="hero">
   <div class="hero-deco"></div>
-
   <div class="hero-grid">
 
-    <!-- Izquierda: copy principal -->
     <div class="hero-copy">
-
       <div class="hero-subtag">
         <span class="dot"></span>
-        Disponible ahora
+        Los líderes en Barométrica de Montevideo
       </div>
-
       <h1 class="hero-titulo">
-        Barométrica
-        <em>Profesional</em>
-        en Montevideo
+        <p>Barométrica con</p> 
+        <p><em>más experiencia</em></p> 
+        <p>de Montevideo</p>
       </h1>
-
       <p class="hero-desc">
-        Desagotes, desobstrucciones y limpieza de cámaras para hogares,
-        comercios e industrias. Empresa habilitada con inscripción RUPE
-        vigente — el respaldo que el Estado y los privados necesitan.
+        Más de cuatro décadas atendiendo particulares e industrias en Montevideo.
+        Flota propia de 4 camiones entre 4.000 y 24.000 litros.
+        Proveedor RUPE habilitado para trabajos con el Estado.
       </p>
-
       <div class="hero-btns">
         <a href="#contacto" class="btn btn-n">Solicitar cotización →</a>
         <a href="#servicios" class="btn btn-o">Ver servicios</a>
       </div>
-
       <div class="chips">
         <div class="chip">
           <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Inscripción RUPE vigente
+          Proveedor RUPE
         </div>
         <div class="chip">
-          <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          Solo Montevideo
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          4 camiones propios
         </div>
         <div class="chip">
           <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Lun–Sáb 8:00–18:00
-        </div>
-        <div class="chip">
-          <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          +598 95 781 100
+          40+ años de experiencia
         </div>
       </div>
-
     </div>
 
-    <!-- Derecha: imagen contenida -->
     <div class="hero-img">
-      <img
-        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
-        alt="Trabajo profesional de barométrica en Montevideo">
+      <!--
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
+      -->
+      <img src="./img/camiones/c4.jpg"
+           alt="Servicio de Barométrica en Montevideo — camión cisterna en obra">
       <div class="hero-img-overlay"></div>
       <div class="hbadge1">
-        <div class="hbadge1-ico">🚛</div>
+        <div class="hbadge1-ico">🏆</div>
         <div>
-          <strong>Flota propia</strong>
-          <span>Camiones cisterna</span>
+          <strong>Más de 40 años</strong>
+          <span>en el rubro</span>
         </div>
       </div>
       <div class="hbadge2">
@@ -133,46 +113,37 @@
 </section>
 
 
-<!-- ═══════════════════════════════════
-     NOSOTROS
-     ═══════════════════════════════════ -->
+<!-- NOSOTROS -->
 <section id="nosotros" class="sec sec-gris">
   <div class="wrap">
-
     <div class="nos-grid">
 
-      <!-- Galería izquierda -->
       <div class="nos-gal">
-
         <div class="nos-foto grande">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Camión cisterna barométrico">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Flota de camiones cisterna barométricos">
           <div class="foto-label">Flota propia</div>
           <div class="foto-badge">
-            <strong>LAN</strong>
-            <span>barométrica</span>
+            <strong>40+</strong>
+            <span>años</span>
           </div>
         </div>
-
         <div class="nos-foto">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Trabajo en obra">
-          <div class="foto-label">En obra</div>
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Trabajo en obra industrial">
+          <div class="foto-label">Industria</div>
         </div>
-
         <div class="nos-foto">
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&q=80" alt="Equipo técnico">
-          <div class="foto-label">Equipo técnico</div>
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&q=80" alt="Servicio para particulares">
+          <div class="foto-label">Particulares</div>
         </div>
-
       </div>
 
-      <!-- Texto derecha -->
       <div class="nos-txt">
         <div class="tag">Sobre nosotros</div>
-        <h2 class="h2">Una empresa con <em>experiencia</em> y respaldo</h2>
+        <h2 class="h2">La barométrica con <em>más experiencia</em> en Montevideo</h2>
 
-        <p>Barométrica LAN es una empresa familiar especializada en servicios de barométrica en Montevideo. Trabajamos con hogares, empresas, constructoras y organismos del Estado con el mismo nivel de compromiso y calidad.</p>
+        <p>Barométrica LAN es la empresa de Barométrica con más años de trayectoria en Montevideo. Atendemos tanto a particulares como a industrias, con el mismo nivel de compromiso y profesionalismo en cada trabajo.</p>
 
-        <p>Contamos con flota propia de camiones cisterna, personal técnico capacitado y todas las habilitaciones vigentes.</p>
+        <p>Operamos exclusivamente en Montevideo, lo que nos permite ofrecer tiempos de respuesta rápidos y un conocimiento profundo de la ciudad y sus necesidades.</p>
 
         <div class="rupe">
           <div class="rupe-ico">
@@ -185,58 +156,129 @@
         </div>
 
         <div class="stats">
-          <div class="stat animar"><div class="stat-n">Mvd</div><div class="stat-l">Cobertura Montevideo</div></div>
+          <div class="stat animar"><div class="stat-n">40+</div><div class="stat-l">Años en el rubro</div></div>
+          <div class="stat animar"><div class="stat-n">4</div><div class="stat-l">Camiones propios</div></div>
+          <div class="stat animar"><div class="stat-n">Mvd</div><div class="stat-l">Montevideo</div></div>
           <div class="stat animar"><div class="stat-n">RUPE</div><div class="stat-l">Proveedor del Estado</div></div>
-          <div class="stat animar"><div class="stat-n">+100</div><div class="stat-l">Clientes atendidos</div></div>
-          <div class="stat animar"><div class="stat-n">100%</div><div class="stat-l">Habilitaciones vigentes</div></div>
         </div>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- FLOTA -->
+<section id="flota" class="sec">
+  <div class="wrap">
+    <div class="tag">Nuestra flota</div>
+    <h2 class="h2">4 camiones disponibles para <em>tus necesidades</em></h2>
+    <p class="bajada" style="margin-bottom:48px">Contamos con camiones cisterna de distintas capacidades para adaptarnos a todo tipo de trabajo, desde hogares hasta grandes industrias.</p>
+
+    <div class="flota-grid">
+
+      <div class="flota-card animar">
+        <div class="flota-top flota-top--sm">
+          <div class="flota-ico">🚛</div>
+          <div class="flota-cap">4.000 L</div>
+        </div>
+        <div class="flota-body">
+          <h3>Camión pequeño</h3>
+          <p>Ideal para casas, apartamentos y propiedades con acceso reducido. Maniobra en calles angostas del casco urbano de Montevideo.</p>
+          <ul class="flota-tags">
+            <li>Hogares y apartamentos</li>
+            <li>Calles de difícil acceso</li>
+            <li>Pozos sépticos pequeños</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!--
+      <div class="flota-card animar">
+        <div class="flota-top flota-top--md">
+          <div class="flota-ico">🚛</div>
+          <div class="flota-cap">8.000 L</div>
+        </div>
+        <div class="flota-body">
+          <h3>Camión mediano</h3>
+          <p>Perfecto para edificios, propiedades horizontales y comercios medianos. Relación óptima entre capacidad y maniobrabilidad.</p>
+          <ul class="flota-tags">
+            <li>Edificios y PH</li>
+            <li>Comercios y restaurantes</li>
+            <li>Cámaras y graseras</li>
+          </ul>
+        </div>
+      </div>
+      -->
+
+      <div class="flota-card animar">
+        <div class="flota-top flota-top--lg">
+          <div class="flota-ico">🚛</div>
+          <div class="flota-cap">16.000 L</div>
+        </div>
+        <div class="flota-body">
+          <h3>Camión grande</h3>
+          <p>Para trabajos industriales de mediana envergadura. Plantas de procesamiento, frigoríficos y grandes establecimientos.</p>
+          <ul class="flota-tags">
+            <li>Industrias medianas</li>
+            <li>Grandes establecimientos</li>
+            <li>Obras en construcción</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flota-card animar">
+        <div class="flota-top flota-top--xl">
+          <div class="flota-ico">🚛</div>
+          <div class="flota-cap">24.000 L</div>
+        </div>
+        <div class="flota-body">
+          <h3>Camión industrial</h3>
+          <p>Nuestra unidad de mayor capacidad. Para grandes volúmenes industriales, traslado masivo de líquidos y trabajos de alta demanda.</p>
+          <ul class="flota-tags">
+            <li>Grandes plantas industriales</li>
+            <li>Traslado masivo de líquidos</li>
+            <li>Proveedores del Estado</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════
-     SERVICIOS
-     ═══════════════════════════════════ -->
-<section id="servicios" class="sec">
+<!-- SERVICIOS -->
+<section id="servicios" class="sec sec-gris">
   <div class="wrap">
-
     <div class="sv-head">
       <div>
         <div class="tag">Nuestros servicios</div>
-        <h2 class="h2">Todo lo que <em>necesitás</em></h2>
-        <p class="bajada">Soluciones completas de barométrica en Montevideo para hogares, comercios e industrias.</p>
+        <h2 class="h2">Soluciones para <em>particulares e industrias</em></h2>
+        <p class="bajada">Atendemos todo tipo de clientes en Montevideo, desde hogares hasta grandes plantas industriales.</p>
       </div>
       <a href="#contacto" class="btn btn-n">Pedir cotización →</a>
     </div>
-
     <div class="sv-grid">
 
       <div class="sv animar">
         <div class="sv-top">
-          <div class="sv-ico">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
+          <div class="sv-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
           <h3>Desagote de pozos sépticos</h3>
         </div>
         <div class="sv-body">
-          <p>Vaciado completo y limpieza de pozos sépticos con camión cisterna. Servicio rápido y prolijo para todo tipo de propiedades en Montevideo.</p>
+          <p>Vaciado completo y limpieza de pozos sépticos con camión cisterna. Servicio rápido para todo tipo de propiedades en Montevideo.</p>
           <ul>
             <li>Casas y apartamentos</li>
             <li>Edificios y propiedades horizontales</li>
             <li>Propiedades rurales y quintas</li>
-            <li>Respuesta rápida en Montevideo</li>
+            <li>Respuesta ágil en Montevideo</li>
           </ul>
         </div>
       </div>
 
       <div class="sv animar">
         <div class="sv-top">
-          <div class="sv-ico">
-            <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-          </div>
+          <div class="sv-ico"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
           <h3>Desobstrucción de cañerías</h3>
         </div>
         <div class="sv-body">
@@ -252,9 +294,7 @@
 
       <div class="sv animar">
         <div class="sv-top">
-          <div class="sv-ico">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
+          <div class="sv-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
           <h3>Limpieza de cámaras y graseras</h3>
         </div>
         <div class="sv-body">
@@ -270,13 +310,11 @@
 
       <div class="sv animar">
         <div class="sv-top">
-          <div class="sv-ico">
-            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-          </div>
+          <div class="sv-ico"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
           <h3>Servicios industriales y especiales</h3>
         </div>
         <div class="sv-body">
-          <p>Carga, descarga y traslado de líquidos residuales para plantas industriales, frigoríficos y constructoras. Asesoramiento técnico incluido.</p>
+          <p>Carga, descarga y traslado de líquidos residuales para plantas industriales, frigoríficos y constructoras. Capacidad hasta 24.000 litros por viaje.</p>
           <ul>
             <li>Plantas industriales y frigoríficos</li>
             <li>Obras en construcción</li>
@@ -291,196 +329,155 @@
 </section>
 
 
-<!-- ═══════════════════════════════════
-     GALERÍA
-     ═══════════════════════════════════ -->
-<section id="galeria" class="sec sec-gris">
+<!-- GALERÍA -->
+<section id="galeria" class="sec">
   <div class="wrap">
     <div class="tag">Nuestros trabajos</div>
     <h2 class="h2" style="margin-bottom:10px">Trabajos <em>en campo</em></h2>
-    <p class="bajada" style="margin-bottom:44px">Operamos en Montevideo con equipamiento moderno y personal capacitado para cualquier tipo de trabajo.</p>
-
+    <p class="bajada" style="margin-bottom:44px">Particulares e industrias en Montevideo confían en nosotros hace más de cuatro décadas.</p>
     <div class="gal-grid">
       <div class="gf ancho animar">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Servicio barométrico en obra industrial">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Servicio barométrico en obra industrial Montevideo">
         <div class="gf-ov"><span>Servicios industriales</span></div>
       </div>
       <div class="gf animar">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Camión barométrico cisterna">
-        <div class="gf-ov"><span>Flota de camiones</span></div>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Flota de camiones cisterna">
+        <div class="gf-ov"><span>Flota propia de camiones</span></div>
       </div>
       <div class="gf animar">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&q=80" alt="Técnicos de barométrica">
-        <div class="gf-ov"><span>Equipo profesional</span></div>
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&q=80" alt="Servicio para particulares">
+        <div class="gf-ov"><span>Servicio para particulares</span></div>
       </div>
       <div class="gf animar">
-        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=500&q=80" alt="Mantenimiento de cañerías">
-        <div class="gf-ov"><span>Mantenimiento</span></div>
+        <img src="./img/camiones/c4.jpg" alt="Mantenimiento de cañerías">
+        <div class="gf-ov"><span>Mantenimiento y desobstrucción</span></div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════
-     EMPRESAS
-     ═══════════════════════════════════ -->
+<!-- EMPRESAS -->
 <section id="empresas" class="sec sec-azul">
   <div class="wrap">
     <div class="tag tag-blanco">Sector empresarial</div>
     <h2 class="h2 h2-blanco">Soluciones para <em>empresas e industrias</em></h2>
     <p class="bajada bajada-blanca" style="margin-top:10px">Trabajamos con todo tipo de organizaciones en Montevideo. Ofrecemos contratos de mantenimiento, atención prioritaria y documentación completa para licitaciones.</p>
-
     <div class="emp-grid">
-
       <div class="emp animar">
         <div class="emp-ico"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
         <h3>Contratos de mantenimiento</h3>
         <p>Frecuencia acordada, facturación periódica y prioridad de atención. Ideal para restaurantes, hoteles, edificios e industrias.</p>
       </div>
-
       <div class="emp animar">
         <div class="emp-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
         <h3>Proveedor RUPE habilitado</h3>
         <p>Inscripción vigente en el Registro Único de Proveedores del Estado. Participamos en licitaciones y contratos públicos.</p>
       </div>
-
       <div class="emp animar">
         <div class="emp-ico"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
         <h3>Obras y construcción</h3>
         <p>Limpieza de piletas provisorias, pozos de obra y traslado de residuos líquidos. Coordinación directa con el director de obra.</p>
       </div>
-
       <div class="emp animar">
         <div class="emp-ico"><svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
         <h3>Plantas industriales</h3>
-        <p>Limpieza de fosas, cámaras y sistemas de tratamiento en plantas de procesamiento, frigoríficos y manufactura.</p>
+        <p>Limpieza de fosas, cámaras y sistemas de tratamiento. Flota de hasta 24.000 litros para grandes volúmenes industriales.</p>
       </div>
-
       <div class="emp animar">
         <div class="emp-ico"><svg viewBox="0 0 24 24"><path d="M3 3h18M3 9h18M3 15h18M3 21h18"/></svg></div>
         <h3>Gastronomía y hotelería</h3>
         <p>Mantenimiento de graseras y sistemas de desagüe en cocinas industriales. Cumplimiento de normativas de Bromatología.</p>
       </div>
-
       <div class="emp animar">
         <div class="emp-ico"><svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
         <h3>Asesoramiento técnico</h3>
         <p>Te orientamos sobre la frecuencia óptima de mantenimiento, normativas vigentes y la mejor solución para cada caso.</p>
       </div>
-
     </div>
-
     <div class="emp-cta">
       <p>¿Tu empresa necesita un servicio a medida o un contrato de mantenimiento?</p>
       <a href="#contacto" class="btn btn-n">Solicitar propuesta →</a>
     </div>
-
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════
-     GRUPO DE EMPRESAS
-     ═══════════════════════════════════ -->
-<section id="grupo" class="sec">
+<!-- GRUPO -->
+<section id="grupo" class="sec sec-gris">
   <div class="wrap">
     <div class="tag">Grupo empresarial</div>
     <h2 class="h2">Parte de un <em>grupo sólido</em></h2>
-    <p class="bajada" style="margin-bottom:0">Barométrica LAN integra un grupo de empresas uruguayas de servicios.</p>
-
+    <p class="bajada" style="margin-bottom:0">Barométrica LAN integra el grupo Transportes Castro, un conjunto de empresas uruguayas de servicios.</p>
     <div class="grupo-grid">
-
       <div class="gcard g-lan animar">
         <div class="gcard-top">
-          <span class="gbadge">barométrica · Montevideo</span>
+          <span class="gbadge">Barométrica · Montevideo</span>
           <div class="glogo">Barométrica LAN</div>
-          <p>Servicio de barométrica profesional: desagotes, desobstrucciones y limpieza de cámaras. Inscripción RUPE vigente para trabajos con el Estado.</p>
+          <p>La barométrica con más años en Montevideo. Desagotes, desobstrucciones y limpieza de cámaras para particulares e industrias. Inscripción RUPE vigente.</p>
         </div>
-        <div class="gcard-foot">
-          <span>📍 Estás aquí</span>
-          <a href="#inicio">Inicio ↗</a>
-        </div>
+        <div class="gcard-foot"><span>📍 Estás aquí</span><a href="#inicio">Inicio ↗</a></div>
       </div>
-
       <div class="gcard g-vc animar">
         <div class="gcard-top">
-          <span class="gbadge">Transporte · Logística</span>
+          <span class="gbadge">Volquetas · Montevideo</span>
           <div class="glogo">Volcast</div>
-          <p>Empresa de transporte y logística del Grupo Transportes Castro. Soluciones de traslado y flota para empresas en Uruguay.</p>
+          <p>Empresa de alquiler de volquetas en Montevideo y Canelones de Transportes Castro. Solución confiable para empresas en Uruguay.</p>
         </div>
         <div class="gcard-foot">
           <span>volcast.transportescastro.com.uy</span>
           <a href="https://volcast.transportescastro.com.uy" target="_blank" rel="noopener">Visitar ↗</a>
         </div>
       </div>
-
       <div class="gcard g-vq animar">
         <div class="gcard-top">
-          <span class="gbadge">Residuos · Contenedores</span>
+          <span class="gbadge">Volquetas · Maldonado</span>
           <div class="glogo">Volquetas del Este</div>
-          <p>Alquiler de volquetas y contenedores para empresas, particulares e industrias. Retiro y disposición final de residuos sólidos y escombros.</p>
+          <p>Alquiler de volquetas en Maldonado para empresas, particulares e industrias. Retiro y disposición final de residuos.</p>
         </div>
         <div class="gcard-foot">
           <span>volquetasdeleste.transportescastro.com.uy</span>
           <a href="https://volquetasdeleste.transportescastro.com.uy" target="_blank" rel="noopener">Visitar ↗</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════
-     CONTACTO
-     ═══════════════════════════════════ -->
-<section id="contacto" class="sec sec-gris">
+<!-- CONTACTO -->
+<section id="contacto" class="sec">
   <div class="wrap">
     <div class="tag">Contacto</div>
     <h2 class="h2">Pedí tu <em>cotización</em></h2>
     <p class="bajada" style="margin-bottom:0">Completá el formulario o escribinos directamente. Respondemos en horario de atención.</p>
-
     <div class="ct-grid">
-
-      <!-- Info izquierda -->
       <div class="ct-info">
         <h3>Datos de contacto</h3>
-
         <div class="ct-item">
           <div class="ct-ico"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
           <div><strong>Teléfono</strong><a href="tel:+59895781100">+598 95 781 100</a></div>
         </div>
-
         <div class="ct-item">
           <div class="ct-ico"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
           <div><strong>Email</strong><a href="mailto:barometricalan@hotmail.com">barometricalan@hotmail.com</a></div>
         </div>
-
         <div class="ct-item">
           <div class="ct-ico"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-          <div><strong>Cobertura</strong><span>Montevideo y área metropolitana</span></div>
+          <div><strong>Cobertura</strong><span>Montevideo</span></div>
         </div>
-
         <div class="hora-box">
           <div class="hora-ico"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <div>
-            <strong>Horario de atención</strong>
-            <span>Lunes a Sábado: 8:00 – 18:00 hs</span>
-          </div>
+          <div><strong>Horario de atención</strong><span>Lunes a Sábado: 8:00 – 18:00 hs</span></div>
         </div>
-
         <a class="wa-btn" href="https://wa.me/59895781100?text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Contactar por WhatsApp
         </a>
       </div>
-
-      <!-- Formulario derecha -->
       <div class="form">
         <h3>Solicitar cotización</h3>
         <p>Completá el formulario y te respondemos a la brevedad en horario hábil.</p>
-
         <div id="cform">
           <div class="f2">
             <div class="fg"><label for="fn">Nombre *</label><input type="text" id="fn" placeholder="Tu nombre completo"></div>
@@ -501,10 +498,10 @@
               </select>
             </div>
             <div class="fg">
-              <label for="fp">Tipo de propiedad</label>
+              <label for="fp">Tipo de cliente</label>
               <select id="fp">
                 <option value="">Seleccionar...</option>
-                <option>Casa / apartamento</option>
+                <option>Particular / hogar</option>
                 <option>Edificio / PH</option>
                 <option>Empresa / comercio</option>
                 <option>Industria / planta</option>
@@ -513,43 +510,37 @@
               </select>
             </div>
           </div>
-          <div class="fg"><label for="fm">Descripción del trabajo</label><textarea id="fm" placeholder="Describí brevemente lo que necesitás: tipo de trabajo, dirección aproximada, dimensiones si las conocés..."></textarea></div>
+          <div class="fg"><label for="fm">Descripción</label><textarea id="fm" placeholder="Describí brevemente lo que necesitás: tipo de trabajo, dirección aproximada, dimensiones si las conocés..."></textarea></div>
           <button class="btn-form" onclick="enviar()">
             <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Enviar solicitud
           </button>
         </div>
-
         <div class="form-ok" id="cok">
           <div class="emo">✅</div>
           <p>¡Solicitud recibida! Te contactamos a la brevedad en horario de atención (Lun–Sáb 8:00–18:00 hs).</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="ft">
     <div class="ft-grid">
-
       <div class="ft-brand">
         <div class="ft-logo">
-          <div class="ft-logo-ico">BL</div>
+          <img src="./img/logos/lanNaranja.png" alt="Barométrica LAN Logo" class="ft-logo-ico">
           <div class="ft-logo-txt">Barométrica LAN</div>
         </div>
-        <p>Servicio profesional de barométrica en Montevideo. Desagotes, desobstrucciones y limpieza de cámaras. Proveedor RUPE habilitado.</p>
+        <p>La barométrica con más años en Montevideo. Servicio para particulares e industrias. Proveedor RUPE habilitado. 4 camiones.</p>
         <div class="ft-social">
           <a href="https://wa.me/59895781100" target="_blank" rel="noopener">💬 WhatsApp</a>
           <a href="mailto:barometricalan@hotmail.com">✉ Email</a>
         </div>
       </div>
-
       <div class="ft-col">
         <h4>Servicios</h4>
         <ul>
@@ -560,18 +551,16 @@
           <li><a href="#empresas">Servicios industriales</a></li>
         </ul>
       </div>
-
       <div class="ft-col">
         <h4>Empresa</h4>
         <ul>
           <li><a href="#nosotros">Sobre nosotros</a></li>
+          <li><a href="#flota">Nuestra flota</a></li>
           <li><a href="#galeria">Trabajos realizados</a></li>
           <li><a href="#empresas">Sector empresarial</a></li>
-          <li><a href="#grupo">Grupo empresarial</a></li>
           <li><a href="#contacto">Cotización</a></li>
         </ul>
       </div>
-
       <div class="ft-col">
         <h4>Grupo</h4>
         <ul>
@@ -581,18 +570,15 @@
           <li><a href="mailto:barometricalan@hotmail.com">barometricalan@hotmail.com</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="ft-bottom">
       <p>© 2025 Barométrica LAN · Montevideo, Uruguay · Proveedor RUPE</p>
-      <p>Parte del <a href="#grupo">Grupo Transportes Castro</a></p>
+      <p>Parte del grupo <a href="#grupo">Transportes Castro</a></p>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/59895781100?text=Hola%2C%20me%20interesa%20un%20servicio%20de%20barométrica." target="_blank" rel="noopener" class="wa" title="Escribinos por WhatsApp">
+<a href="https://wa.me/59895781100?text=Hola%2C%20me%20interesa%20un%20servicio%20de%20Barométrica." target="_blank" rel="noopener" class="wa" title="Escribinos por WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
