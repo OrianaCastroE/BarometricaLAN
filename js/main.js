@@ -74,3 +74,89 @@ window.enviar = () => {
   document.getElementById('cform').style.display = 'none';
   document.getElementById('cok').style.display   = 'block';
 };
+
+/* Carrusel de camiones */
+(function () {
+  var track  = document.getElementById('carruselTrack');
+  var dotsEl = document.getElementById('carruselDots');
+  if (!track) return;
+
+  var slides = track.querySelectorAll('.carrusel-slide');
+  var total  = slides.length;
+  var current = 0;
+  var timer;
+
+  slides.forEach(function(_, i) {
+    var d = document.createElement('button');
+    d.setAttribute('aria-label', 'Foto ' + (i + 1));
+    d.addEventListener('click', function() { ir(i); reiniciarTimer(); });
+    dotsEl.appendChild(d);
+  });
+
+  function ir(n) {
+    current = (n + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsEl.querySelectorAll('button').forEach(function(d, i) {
+      d.classList.toggle('activo', i === current);
+    });
+  }
+
+  function reiniciarTimer() {
+    clearInterval(timer);
+    timer = setInterval(function() { ir(current + 1); }, 4000);
+  }
+
+  window.moverCarrusel = function(dir) { ir(current + dir); reiniciarTimer(); };
+
+  ir(0);
+  reiniciarTimer();
+
+  var carrusel = document.getElementById('carrusel');
+  carrusel.addEventListener('mouseenter', function() { clearInterval(timer); });
+  carrusel.addEventListener('mouseleave', reiniciarTimer);
+})();
+
+/* Lightbox */
+(function () {
+  var lb     = document.getElementById('lb');
+  var lbImg  = document.getElementById('lbImg');
+  var lbCerrar = document.getElementById('lbCerrar');
+
+  function abrir(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('activo');
+    document.body.style.overflow = 'hidden';
+  }
+  function cerrar() {
+    lb.classList.remove('activo');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  /* Fotos del carrusel */
+  document.querySelectorAll('.carrusel-slide img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) { e.stopPropagation(); abrir(img.src, img.alt); });
+  });
+
+  /* Fotos de empleados (tc-p usa background-image, abrimos desde data) */
+  document.querySelectorAll('.tc-p').forEach(function(el) {
+    var bg = el.style.backgroundImage.replace(/url\(['"]?|['"]?\)/g, '');
+    if (!bg) return;
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', function(e) { e.stopPropagation(); abrir(bg, el.closest('.tc')?.querySelector('strong')?.textContent || ''); });
+  });
+
+  /* Fotos de galería nos-foto */
+  document.querySelectorAll('.nos-foto img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) { e.stopPropagation(); abrir(img.src, img.alt); });
+  });
+
+  /* Cerrar */
+  lbCerrar.addEventListener('click', cerrar);
+  lb.addEventListener('click', cerrar);
+  lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') cerrar(); });
+})();
