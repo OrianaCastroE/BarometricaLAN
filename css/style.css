@@ -498,26 +498,44 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 /*
 SECCION EMPLEADOS
 */
+.team-g{
+  display: grid;
+  grid-template-columns:repeat(5,1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:12px;
+  margin-top:34px;
+}
+
 .tc{
   background:#fff;
   border-radius:8px;
   overflow:hidden;
   border:1.5px solid var(--azul);
   text-align:center;
-  transition:all .3s
+  transition:all .3s;
+  min-width:160px;
+  flex:0 1 160px;
 }
 .tc:hover{
   border-color:var(--azul-osc);
-  box-shadow:0 8px 22px var(--azul-cla);
-  transform:translateY(-4px)
+  box-shadow:0 0 22px 6px var(--azul-osc);
 }
 .tc-p{
-  height:142px;
-  background:var(--azul) url('img/integrantes/cv1.jpg') center/cover no-repeat}
+  height:170px;
+  background-color:var(--azul);background-position:center;background-size:cover;background-repeat:no-repeat}
 .tc-i{
   padding:10px
-}.tc-i strong{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.94rem;color:var(--azul-osc)}
-.tc-i span{font-size:.74rem;color:var(--gm)}
+}.tc-i strong{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--azul-osc)}
+.tc-i span{font-size:.74rem;color:var(--gris-txt)}
+
+.sec-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(22px,2.5vw,32px);
+  font-weight:800;
+  color:#1a1f2e;
+  margin-bottom:4px;
+}
 
 /* =========================================================
    SERVICIOS
