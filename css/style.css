@@ -484,8 +484,12 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 .nos-gal {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 220px 160px;
+  grid-template-rows: 220px 160px auto;
   gap: 12px;
+}
+.nos-gal .stats {
+  grid-column: 1 / -1;
+  margin-top: 4px;
 }
 .nos-foto {
   border-radius: 14px; overflow: hidden;
@@ -559,8 +563,8 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 SECCION EMPLEADOS
 */
 .our-team {
-  padding-top:46px;
-  padding-bottom:46px;
+  padding-top:20px;
+  padding-bottom:20px;
   border-top: 2px solid var(--azul);
   border-bottom:2px solid var(--azul);
   grid-column:1/-1
