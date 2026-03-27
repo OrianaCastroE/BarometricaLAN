@@ -598,16 +598,13 @@ SECCION EMPLEADOS
   box-shadow: 0 0 22px 6px var(--azul-osc);
 }
 .tc-p {
-  aspect-ratio: 3 / 4;
+  padding-top: 120%;
+  position: relative;
   overflow: hidden;
-  background: var(--gris-bg);
-}
-.tc-p img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
+  background-color: var(--gris-bg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .tc-i { padding: 8px 6px; }
 .tc-i strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: .9rem; line-height: 1.2; color: var(--azul-osc); }
@@ -621,7 +618,11 @@ SECCION EMPLEADOS
   .tc-i span { font-size: .7rem; }
 }
 @media (max-width: 480px) {
-  .tc { flex: 0 0 calc(50% - 6px); }
+  .team-g { gap: 8px; }
+  .tc { flex: 0 0 calc(50% - 5px); }
+  .tc-i { padding: 6px 5px; }
+  .tc-i strong { font-size: .78rem; }
+  .tc-i span { font-size: .65rem; }
 }
 
 .sec-title{
