@@ -565,6 +565,7 @@ SECCION EMPLEADOS
 .our-team {
   padding-top:20px;
   padding-bottom:20px;
+  margin-bottom: 5px;
   border-top: 2px solid var(--azul);
   border-bottom:2px solid var(--azul);
   grid-column:1/-1
@@ -607,8 +608,8 @@ SECCION EMPLEADOS
   font-family:'Barlow Condensed',sans-serif;
   font-size:clamp(22px,2.5vw,32px);
   font-weight:800;
-  color:#1a1f2e;
-  margin-bottom:4px;
+  color:var(--azul-osc);
+  margin-bottom:10px;
 }
 
 /* =========================================================
