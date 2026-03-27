@@ -8,6 +8,12 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('sombra', window.scrollY > 10);
 }, { passive: true });
 
+/* ── BOTÓN VOLVER ARRIBA ─────────────────────────────── */
+const btnTop = document.getElementById('btnTop');
+window.addEventListener('scroll', () => {
+  btnTop.classList.toggle('visible', window.scrollY > 300);
+}, { passive: true });
+
 /* ── HAMBURGUESA ────────────────────────────────────────── */
 const ham = document.getElementById('ham');
 const mob = document.getElementById('mob');

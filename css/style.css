@@ -1329,3 +1329,40 @@ footer {
   .hero-grid { padding-left: 14px; padding-right: 14px; }
   footer { padding-left: 14px; padding-right: 14px; }
 }
+
+/* ── BOTÓN VOLVER ARRIBA ─────────────────────────────── */
+#btnTop {
+  position: fixed;
+  bottom: 28px;
+  left: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(37, 99, 235, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity .3s, transform .3s, background .2s;
+  z-index: 900;
+}
+#btnTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#btnTop:hover {
+  background: rgba(37, 99, 235, 0.82);
+}
+#btnTop svg {
+  width: 22px;
+  height: 22px;
+}
