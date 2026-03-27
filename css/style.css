@@ -593,10 +593,10 @@ SECCION EMPLEADOS
   box-shadow: 0 0 22px 6px var(--azul-osc);
 }
 .tc-p {
-  height: 180px;
-  background-color: var(--azul);
+  height: 200px;
+  background-color: var(--gris-bg);
   background-position: center top;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .tc-i { padding: 12px 8px; }
@@ -606,7 +606,7 @@ SECCION EMPLEADOS
 @media (max-width: 760px) {
   .team-g { flex-wrap: wrap; gap: 10px; }
   .tc { flex: 0 0 calc(33.333% - 8px); }
-  .tc-p { height: 120px; }
+  .tc-p { height: 140px; }
   .tc-i { padding: 8px 6px; }
   .tc-i strong { font-size: .85rem; }
   .tc-i span { font-size: .7rem; }
