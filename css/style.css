@@ -598,8 +598,7 @@ SECCION EMPLEADOS
   box-shadow: 0 0 22px 6px var(--azul-osc);
 }
 .tc-p {
-  padding-top: 120%;
-  position: relative;
+  height: 190px;
   overflow: hidden;
   background-color: var(--gris-bg);
   background-position: top center;
