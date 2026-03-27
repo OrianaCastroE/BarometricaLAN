@@ -267,7 +267,7 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
    HERO
    ========================================================= */
 .hero {
-  min-height: 100vh;
+  min-height: max(580px, min(100vh, 860px));
   padding-top: var(--nav-h);
   background: linear-gradient(145deg, var(--azul-osc) 0%, var(--azul) 65%, #1e6bb0 100%);
   display: flex; align-items: center;
@@ -458,6 +458,11 @@ nav.sombra { box-shadow: 0 4px 20px rgba(0,0,0,.09); border-color: transparent; 
 }
 
 /* Responsive hero */
+@media (min-width: 1280px) {
+  .hero-grid { gap: 72px; padding: 60px 32px; }
+  .hero-img { height: 500px; }
+  .hero-titulo { font-size: 56px; }
+}
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; padding: 52px 24px 48px; gap: 36px; }
   .hero-img { height: 280px; }
