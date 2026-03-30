@@ -154,3 +154,137 @@ animables.forEach((el, i) => {
   lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') cerrar(); });
 })();
+
+/* Validacion de formulario de contacto */
+(function () {
+  var form = document.querySelector('.formspree-form');
+  if (!form) return;
+
+  var emailInput = form.querySelector('#form-email');
+  var phoneInput = form.querySelector('#form-phone');
+  if (!emailInput || !phoneInput) return;
+
+  function isValidEmail(value) {
+    var email = value.trim();
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  }
+
+  function isValidPhone(value) {
+    var digits = value.replace(/\D/g, '');
+    if (/^09\d{7}$/.test(digits)) return true;
+    if (/^9\d{7}$/.test(digits)) return true;
+    if (/^5989\d{7}$/.test(digits)) return true;
+    return false;
+  }
+
+  function setFieldError(input, message) {
+    input.setCustomValidity(message || '');
+    var group = input.closest('.fg');
+    if (!group) return;
+
+    group.classList.toggle('fg-error', Boolean(message));
+
+    var help = group.querySelector('.fg-help');
+    if (!help) {
+      help = document.createElement('small');
+      help.className = 'fg-help';
+      group.appendChild(help);
+    }
+    help.textContent = message || '';
+    help.hidden = !message;
+  }
+
+  function setFormFeedback(message, type) {
+    var feedback = form.querySelector('.form-feedback');
+    if (!feedback) {
+      feedback = document.createElement('div');
+      feedback.className = 'form-feedback';
+      form.appendChild(feedback);
+    }
+
+    if (!message) {
+      feedback.hidden = true;
+      feedback.textContent = '';
+      feedback.classList.remove('ok', 'error');
+      return;
+    }
+
+    feedback.textContent = message;
+    feedback.hidden = false;
+    feedback.classList.remove('ok', 'error');
+    feedback.classList.add(type === 'ok' ? 'ok' : 'error');
+  }
+
+  function validateEmail(showMessage) {
+    var value = emailInput.value.trim();
+    if (!value) {
+      setFieldError(emailInput, '');
+      return true;
+    }
+
+    var ok = isValidEmail(value);
+    setFieldError(emailInput, ok ? '' : (showMessage ? 'Ingresa un email valido.' : ''));
+    return ok;
+  }
+
+  function validatePhone(showMessage) {
+    var value = phoneInput.value.trim();
+    if (!value) {
+      setFieldError(phoneInput, '');
+      return true;
+    }
+
+    var ok = isValidPhone(value);
+    setFieldError(phoneInput, ok ? '' : (showMessage ? 'Ingresa un celular valido.' : ''));
+    return ok;
+  }
+
+  emailInput.addEventListener('input', function () { validateEmail(false); });
+  phoneInput.addEventListener('input', function () { validatePhone(false); });
+
+  emailInput.addEventListener('blur', function () { validateEmail(true); });
+  phoneInput.addEventListener('blur', function () { validatePhone(true); });
+
+  form.addEventListener('submit', async function (e) {
+    var emailOk = validateEmail(true);
+    var phoneOk = validatePhone(true);
+    setFormFeedback('', 'ok');
+
+    if (!emailOk || !phoneOk) {
+      e.preventDefault();
+      (emailOk ? phoneInput : emailInput).reportValidity();
+      return;
+    }
+
+    e.preventDefault();
+
+    var btn = form.querySelector('.btn-form');
+    var oldText = btn ? btn.textContent : '';
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+    }
+
+    try {
+      var response = await fetch(form.action, {
+        method: form.method || 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('No se pudo enviar el formulario');
+
+      form.reset();
+      setFieldError(emailInput, '');
+      setFieldError(phoneInput, '');
+      setFormFeedback('Gracias. Recibimos tu solicitud y te contactaremos a la brevedad.', 'ok');
+    } catch (error) {
+      setFormFeedback('Hubo un problema al enviar. Intenta nuevamente en unos minutos.', 'error');
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = oldText || 'Enviar';
+      }
+    }
+  });
+})();

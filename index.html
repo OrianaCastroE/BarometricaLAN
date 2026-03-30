@@ -488,11 +488,11 @@
           <div class="f2">
             <div class="fg">
               <label for="form-email">Tu email:</label>
-              <input type="email" id="form-email" name="email" placeholder="correo@ejemplo.com" required>
+              <input type="email" id="form-email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
             </div>
             <div class="fg">
               <label for="form-phone">Teléfono</label>
-              <input type="tel" id="form-phone" name="telefono" placeholder="09X XXX XXX" required>
+              <input type="tel" id="form-phone" name="telefono" placeholder="09X XXX XXX" inputmode="tel" autocomplete="tel" pattern="^(?:\+?598\s?)?(?:0)?9\d{7}$" title="Usa un celular valido: 09X XXX XXX o +598 9XXX XXXX" required>
             </div>
           </div>
 
@@ -525,7 +525,7 @@
 
           <div class="fg">
             <label for="form-message">Tu mensaje:</label>
-            <textarea id="form-message" name="message" placeholder="Contanos qué servicio necesitás..." required></textarea>
+            <textarea id="form-message" name="message" placeholder="Contanos qué servicio necesitás..." ></textarea>
           </div>
 
           <button type="submit" class="btn-form">Enviar</button>

@@ -952,6 +952,19 @@ SECCION EMPLEADOS
   border-color: var(--azul);
   box-shadow: 0 0 0 3px rgba(26,79,138,.1);
 }
+.fg.fg-error input,
+.fg.fg-error select,
+.fg.fg-error textarea {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.12);
+}
+.fg-help {
+  display: block;
+  margin-top: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #b91c1c;
+}
 .fg textarea { resize: vertical; min-height: 100px; }
 .fg select { cursor: pointer; }
 
@@ -964,6 +977,24 @@ SECCION EMPLEADOS
 }
 .btn-form:hover { background: var(--azul-osc); transform: translateY(-2px); }
 .btn-form svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.form-feedback {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-feedback.ok {
+  background: #ecfdf3;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+.form-feedback.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
 
 .form-ok {
   display: none; text-align: center;
