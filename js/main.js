@@ -69,18 +69,6 @@ animables.forEach((el, i) => {
   obs.observe(el);
 });
 
-/* ── FORMULARIO ─────────────────────────────────────────── */
-window.enviar = () => {
-  const nombre = document.getElementById('fn')?.value.trim();
-  const tel    = document.getElementById('ft')?.value.trim();
-  if (!nombre || !tel) {
-    alert('Por favor completá al menos el nombre y el teléfono.');
-    return;
-  }
-  document.getElementById('cform').style.display = 'none';
-  document.getElementById('cok').style.display   = 'block';
-};
-
 /* Carrusel de camiones */
 (function () {
   var track  = document.getElementById('carruselTrack');

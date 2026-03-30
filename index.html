@@ -484,16 +484,22 @@
       <div class="form">
         <h3>Solicitar cotización</h3>
         <p>Completá el formulario y te respondemos a la brevedad en horario hábil.</p>
-        <div id="cform">
-          <div class="f2">
-            <div class="fg"><label for="fn">Nombre *</label><input type="text" id="fn" placeholder="Tu nombre completo"></div>
-            <div class="fg"><label for="ft">Teléfono *</label><input type="tel" id="ft" placeholder="09X XXX XXX"></div>
-          </div>
-          <div class="fg"><label for="fe">Email</label><input type="email" id="fe" placeholder="correo@ejemplo.com"></div>
+        <form action="https://formspree.io/f/meepgrpn" method="POST" class="formspree-form">
           <div class="f2">
             <div class="fg">
-              <label for="fs">Servicio requerido</label>
-              <select id="fs">
+              <label for="form-email">Tu email:</label>
+              <input type="email" id="form-email" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
+            <div class="fg">
+              <label for="form-phone">Teléfono</label>
+              <input type="tel" id="form-phone" name="telefono" placeholder="09X XXX XXX" required>
+            </div>
+          </div>
+
+          <div class="f2">
+            <div class="fg">
+              <label for="form-service">Servicio requerido</label>
+              <select id="form-service" name="servicio_requerido" required>
                 <option value="">Seleccionar...</option>
                 <option>Desagote de pozo séptico</option>
                 <option>Desobstrucción de cañerías</option>
@@ -504,8 +510,8 @@
               </select>
             </div>
             <div class="fg">
-              <label for="fp">Tipo de cliente</label>
-              <select id="fp">
+              <label for="form-client">Tipo de cliente</label>
+              <select id="form-client" name="tipo_de_cliente" required>
                 <option value="">Seleccionar...</option>
                 <option>Particular / hogar</option>
                 <option>Edificio / PH</option>
@@ -516,16 +522,14 @@
               </select>
             </div>
           </div>
-          <div class="fg"><label for="fm">Descripción</label><textarea id="fm" placeholder="Describí brevemente lo que necesitás: tipo de trabajo, dirección aproximada, dimensiones si las conocés..."></textarea></div>
-          <button class="btn-form" onclick="enviar()">
-            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Enviar solicitud
-          </button>
-        </div>
-        <div class="form-ok" id="cok">
-          <div class="emo">✅</div>
-          <p>¡Solicitud recibida! Te contactamos a la brevedad en horario de atención (Lun–Sáb 8:00–18:00 hs).</p>
-        </div>
+
+          <div class="fg">
+            <label for="form-message">Tu mensaje:</label>
+            <textarea id="form-message" name="message" placeholder="Contanos qué servicio necesitás..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-form">Enviar</button>
+        </form>
       </div>
     </div>
   </div>

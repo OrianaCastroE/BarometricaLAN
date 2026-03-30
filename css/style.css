@@ -902,6 +902,42 @@ SECCION EMPLEADOS
 .form h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
 .form > p { font-size: 15px; color: var(--gris-txt); margin-bottom: 26px; }
 
+.formspree-form {
+  display: grid;
+  gap: 12px;
+}
+.formspree-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+}
+.formspree-form input,
+.formspree-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1.5px solid var(--gris-bd);
+  border-radius: 9px;
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+  color: #1a1f2e;
+  background: #fff;
+  transition: border-color .18s, box-shadow .18s;
+  outline: none;
+}
+.formspree-form input:focus,
+.formspree-form textarea:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(26,79,138,.1);
+}
+.formspree-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.formspree-form .btn-form {
+  margin-top: 4px;
+}
+
 .f2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .fg { margin-bottom: 14px; }
 .fg label { display: block; font-size: 13px; font-weight: 700; color: #374151; margin-bottom: 7px; }
