@@ -818,13 +818,13 @@ SECCION EMPLEADOS
 .gcard-foot a { font-size: 13px; font-weight: 700; transition: letter-spacing .15s; }
 .gcard-foot a:hover { letter-spacing: .3px; }
 
-/* Barométrica — destacada */
-.g-lan { border-top: 3px solid var(--azul); }
-.g-lan .gbadge { background: var(--azul-cla); color: var(--azul); }
-.g-lan .glogo  { color: var(--azul); }
-.g-lan .gcard-foot { background: var(--azul-cla); }
-.g-lan .gcard-foot span { font-weight: 700; color: var(--azul); }
-.g-lan .gcard-foot a   { color: var(--azul); }
+/* Transportes Castro */
+.g-tc { border-top: 3px solid #600e1d; }
+.g-tc .gbadge { background: var(--azul-cla); color: #600e1d; }
+.g-tc .glogo  { color: #600e1d; }
+.g-tc .gcard-foot { background: #600e1d; }
+.g-tc .gcard-foot span { font-weight: 700; color: #600e1d; }
+.g-tc .gcard-foot a   { color: #600e1d; }
 
 /* Volcast */
 .g-vc { border-top: 3px solid #6B1020; }
